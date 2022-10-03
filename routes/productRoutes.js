@@ -5,17 +5,21 @@ const express = require('express')
 const router = express.Router()
 
 // Loading our Model of fruit
-const Fruit = require('../models/products')
+const Product = require('../models/products')
 
 // Bring in seed data
 const seed = require('../models/seed')
 
 // Bring in controller functions (destructure methods)
 const { 
-    findAllProducts
+    findAllProducts,
+    seedStarterData,
     } = require('../controllers/productController')
 
 // Setup "index" route
 router.get('/', findAllProducts)
+
+// Setup "seed" route
+router.get('/seed', seedStarterData)
 
 module.exports = router

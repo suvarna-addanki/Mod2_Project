@@ -6,3 +6,5 @@ function mongoConfig() {
         console.log('Connected to MongoDB!')
     })
 }
+
+module.exports = mongoConfig

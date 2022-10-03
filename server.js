@@ -8,6 +8,8 @@ const methodOverride = require('method-override')
 // Bring in mongoConfig function
 const mongoConfig = require('./config')
 
+const productRoutes = require('./routes/productRoutes')
+
 require('dotenv').config()
 
 // Creates our express app (object)
