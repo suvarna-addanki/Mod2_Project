@@ -24,10 +24,10 @@ const seedStarterData = (req, res) => {
             res.status(400).json(err)
         } else {
             console.log('deleted data.')
-            console.log(seed.products)
+            console.log(seed)
             // Data has been successfully deleted
             // Now use seed data to repopulate the database
-            Product.create(seed.products, (err, createdProduct) => {
+            Product.create(seed, (err, createdProduct) => {
                 if (err) {
                     res.status(400).json(err)
                 } else {
