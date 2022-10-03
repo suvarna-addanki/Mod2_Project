@@ -6,5 +6,24 @@
     "mongoose": "^6.6.3",
     "react": "^16.14.0",
     "react-dom": "^16.14.0"
-  }
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "mod2_project",
+  "description": "Welcome to my store!",
+  "version": "1.0.0",
+  "main": "config.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/suvarna-addanki/Mod2_Project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/suvarna-addanki/Mod2_Project/issues"
+  },
+  "homepage": "https://github.com/suvarna-addanki/Mod2_Project#readme"
 }
