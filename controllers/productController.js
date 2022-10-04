@@ -24,7 +24,7 @@ const showNewView = (req, res) => {
 
 // route - delete
 const deleteAProduct = (req, res) => {
-    Log.findByIdAndDelete(req.params.id, (err, deleteProduct) => {
+    Product.findByIdAndDelete(req.params.id, (err, deleteProduct) => {
         if (err) {
             res.status(400).json(err)
         } else {
@@ -37,7 +37,7 @@ const deleteAProduct = (req, res) => {
 const updateOneProduct = (req, res) => {
     
     
-    Log.findByIdAndUpdate(req.params.id, req.body, (err, foundProduct) => {
+    Product.findByIdAndUpdate(req.params.id, req.body, (err, foundProduct) => {
         if (err) {
             res.status(400).json(err)
         } else {
@@ -82,9 +82,23 @@ const showOneProduct = (req, res) => {
         if (err) {
             res.status(400).json(err)
         } else {
-            res.status(200).render('products/Show', { fruit: foundProduct })
+            res.status(200).render('products/Show', { product: foundProduct })
         }
     })
+}
+
+const abc = (req, res) => {
+    Product.findByIdAndUpdate(req.params.id, { $inc: { qty: -1 } }, { new: true }, (err, updatedProduct) => {
+        if (err) {
+            res.status(400).json(err)
+        // } else {
+            res.status(200).render('products/Show', { product: updatedProduct })
+            
+        //     // res.locals.data.product = updatedProduct
+        // }
+}
+
+})
 }
 
 
@@ -122,4 +136,5 @@ const clearData = (req, res) => {
     })
 }
 
-module.exports = {findAllProducts, showNewView, deleteAProduct, updateOneProduct, createNewProduct, showEditView, showOneProduct, seedStarterData,clearData}
+
+module.exports = {findAllProducts, showNewView, deleteAProduct, updateOneProduct, createNewProduct, showEditView, showOneProduct, abc, seedStarterData,clearData}

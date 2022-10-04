@@ -20,7 +20,8 @@ const {
     deleteAProduct,
     updateOneProduct,
     createNewProduct,
-    clearData
+    clearData,
+    abc
     } = require('../controllers/productController')
 
 // Setup "index" route
@@ -40,6 +41,9 @@ router.post('/', createNewProduct)
 
 // Setup "edit" route
 router.get('/:id/edit', showEditView)
+
+//patch
+router.patch('/:id', abc)
 
 // Setup "seed" route
 router.get('/seed', seedStarterData)
