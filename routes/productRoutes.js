@@ -13,13 +13,44 @@ const seed = require('../models/seed')
 // Bring in controller functions (destructure methods)
 const { 
     findAllProducts,
+    showNewView,
+    showEditView,
+    showOneProduct,
     seedStarterData,
+    deleteAProduct,
+    updateOneProduct,
+    createNewProduct,
+    clearData
     } = require('../controllers/productController')
 
 // Setup "index" route
 router.get('/', findAllProducts)
 
+// Setup "new" route
+router.get('/new', showNewView)
+
+//setup delete route
+router.delete('/:id', deleteAProduct)
+
+//setup update route
+router.put('/:id', updateOneProduct)
+
+// Setup "create" route
+router.post('/', createNewProduct)
+
+// Setup "edit" route
+router.get('/:id/edit', showEditView)
+
 // Setup "seed" route
 router.get('/seed', seedStarterData)
+
+//clear route
+router.get('/clear', clearData)
+
+// Setup "show" route  
+router.get('/:id', showOneProduct)
+
+
+
 
 module.exports = router

@@ -16,6 +16,79 @@ const findAllProducts = (req, res) => {
     })
 }
 
+// ROUTE      GET /products/new    (new)
+const showNewView = (req, res) => {     
+    
+    res.render('products/New')
+}
+
+// route - delete
+const deleteAProduct = (req, res) => {
+    Log.findByIdAndDelete(req.params.id, (err, deleteProduct) => {
+        if (err) {
+            res.status(400).json(err)
+        } else {
+            res.status(200).redirect('/products')
+        }
+    })
+}
+
+// route - update
+const updateOneProduct = (req, res) => {
+    
+    
+    Log.findByIdAndUpdate(req.params.id, req.body, (err, foundProduct) => {
+        if (err) {
+            res.status(400).json(err)
+        } else {
+            res.status(200).redirect(`/products/${req.params.id}`);
+        }
+    })
+}
+
+// ROUTE     POST /fruits     (create)
+const createNewProduct = (req, res) => {
+    
+    // Create has two arguments:
+    //   1st: the data we want to send
+    //   2nd: callback function 
+    Product.create(req.body, (err, createdProduct) => {
+        if (err) {
+            res.status(400).json(err)
+        } else {
+            res.status(200).redirect('/products')
+        }
+    })
+}
+
+// ROUTE      GET /products/:id/edit     (edit)
+const showEditView = (req, res) => {
+    Product.findById(req.params.id, (err, foundProduct) => {
+        if (err) {
+            res.status(400).json(err)
+        } else {
+            res.status(200).render('products/Edit', { product: foundProduct })
+        }
+    })
+}
+
+
+// ROUTE     GET /products/:id     (show)
+const showOneProduct = (req, res) => {
+    // findById accepts two arguments:
+    //   1st: the id of the document in our database
+    //   2nd: callback (with error object and found document)
+    Product.findById(req.params.id, (err, foundProduct) => {
+        if (err) {
+            res.status(400).json(err)
+        } else {
+            res.status(200).render('products/Show', { fruit: foundProduct })
+        }
+    })
+}
+
+
+
 // ROUTE       GET /products/seed      (seed)
 const seedStarterData = (req, res) => {
     // Delete all remaining documents (if there are any)
@@ -38,4 +111,15 @@ const seedStarterData = (req, res) => {
     })
 }
 
-module.exports = {findAllProducts, seedStarterData}
+//route clear
+const clearData = (req, res) => {
+    Product.deleteMany({}, (err, deletedProducts) => {
+        if (err) {
+            res.status(400).json(err)
+        } else { 
+            res.status(200).redirect('/products')
+        }
+    })
+}
+
+module.exports = {findAllProducts, showNewView, deleteAProduct, updateOneProduct, createNewProduct, showEditView, showOneProduct, seedStarterData,clearData}
