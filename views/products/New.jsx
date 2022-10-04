@@ -9,29 +9,29 @@ class New extends React.Component {
                             <form action="/products" method="POST">
                                    Name:
                                    <br></br>
-                                   <input type="text" name="name" required />
+                                   <input type="text" name="name" required placeholder='name' />
                                    <br></br>
                                    <br></br>
                                    Description:
                                    <br></br>
-                                   <input type="text" name="description" />
+                                   <input type="text" name="description" placeholder='description' />
                                    <br></br>
                                    <br></br>
                                    Image URL:
                                    <br></br>
-                                   <input type="text" name="img" />
+                                   <input type="text" name="img" placeholder='url' />
                                    <br></br>
                                    <br></br>
                                    Price:
                                    <br></br>
-                                   <input type="number" name="price" step="1" min="0" /><br></br>
+                                   <input type="number" name="price" step="1" min="0" placeholder='price' /><br></br>
                                    <br></br>
                                    Quantity:
                                    <br></br>
-                                   <input type="number" name="qty" min="0" step="1" /><br></br>
-                                   <br></br>
-                                   <input type="submit" name="" value="Create New Book" /><br></br>
-                                   <br></br>
+                                   <input type="number" name="qty" min="0" step="1" placeholder='qty' /><br></br>
+                                   
+                                   <input type="submit" name="" value="Create New Book"  /><br></br>                                    
+                                   <a href={`/products/`} style= {{marginLeft:10 + 'em'}} >Back </a>
                             </form>
                      </div>
               )

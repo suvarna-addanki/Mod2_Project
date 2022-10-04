@@ -21,7 +21,8 @@ const {
     updateOneProduct,
     createNewProduct,
     clearData,
-    abc
+    abc,
+    buyProduct
     } = require('../controllers/productController')
 
 // Setup "index" route
@@ -43,7 +44,7 @@ router.post('/', createNewProduct)
 router.get('/:id/edit', showEditView)
 
 //patch
-router.patch('/:id', abc)
+router.patch('/:id', buyProduct)
 
 // Setup "seed" route
 router.get('/seed', seedStarterData)

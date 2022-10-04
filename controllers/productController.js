@@ -87,18 +87,16 @@ const showOneProduct = (req, res) => {
     })
 }
 
-const abc = (req, res) => {
+const buyProduct = (req, res) => {
     Product.findByIdAndUpdate(req.params.id, { $inc: { qty: -1 } }, { new: true }, (err, updatedProduct) => {
         if (err) {
             res.status(400).json(err)
-        // } else {
-            res.status(200).render('products/Show', { product: updatedProduct })
-            
-        //     // res.locals.data.product = updatedProduct
-        // }
-}
+         } else {
+            res.status(200).render('products/Show', { product: updatedProduct })           
+        
+        }
 
-})
+        })
 }
 
 
@@ -137,4 +135,4 @@ const clearData = (req, res) => {
 }
 
 
-module.exports = {findAllProducts, showNewView, deleteAProduct, updateOneProduct, createNewProduct, showEditView, showOneProduct, abc, seedStarterData,clearData}
+module.exports = {findAllProducts, showNewView, deleteAProduct, updateOneProduct, createNewProduct, showEditView, showOneProduct, buyProduct, seedStarterData,clearData}
