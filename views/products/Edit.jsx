@@ -22,14 +22,15 @@ class Edit extends React.Component {
                                    <br></br>
                                    Price:
                                    <br></br>
-                                   <input type="number" name="price" step="0.01 " min='0' defaultValue={this.props.product.price} /><br />
+                                   <input type="number" name="price" step="0.01" min='0' defaultValue={this.props.product.price} /><br />
                                    <br></br>
                                    Quantity:
                                    <br></br>
                                    <input type="number" name="qty" min='0' step="1" defaultValue={this.props.product.qty} /><br></br>
                                    <br></br>
-                                   <input type="submit" value="Submit Changes" />
+                                   <input id="submit" type="submit" value="Submit Changes" />                            
                                    <br></br>
+                                   <a href={`/products/`}>Back </a>
                             </form>
                      </div>
               )

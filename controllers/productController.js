@@ -88,7 +88,7 @@ const showOneProduct = (req, res) => {
 }
 
 const buyProduct = (req, res) => {
-    Product.findByIdAndUpdate(req.params.id, { $inc: { qty: -1 } }, { new: true }, (err, updatedProduct) => {
+    Product.findByIdAndUpdate(req.params.id, { $inc: { qty: -1 } }, (err, updatedProduct) => {
         if (err) {
             res.status(400).json(err)
          } else {

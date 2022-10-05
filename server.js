@@ -26,6 +26,9 @@ app.engine('jsx', require('express-react-views').createEngine())
 app.use(express.urlencoded({extended:false}))
 app.use(express.static("public"))
 app.use(methodOverride("_method"))
+app.get('/', (req,res) => {
+    res.redirect("/products")
+})
 
 app.use('/products', productRoutes)
 
