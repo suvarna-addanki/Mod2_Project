@@ -1,6 +1,6 @@
 ♦️ Live link:
 
-https://outrageous-pear-catfish.cyclic.app/
+https://the-book-worm.cyclic.app/
 
 The Book Worm is a fullstack CRUD app.
 
