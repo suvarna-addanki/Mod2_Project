@@ -14,12 +14,6 @@ When the user clicks on the book image, product detail page opens where book can
 
 Details of the book can be updated in edit page (PUT)
 
-Sample Screenshots: 
-
-Index page:
- 
-Create Page:
-
 ♦️ Technologies used
 
 MongoDB

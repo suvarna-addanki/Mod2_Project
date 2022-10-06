@@ -1,7 +1,9 @@
 const React = require('react');
+const DefaultLayout = require('../Layouts/DefaultLayouts');
 class Edit extends React.Component {
        render() {
               return (
+                     <DefaultLayout>
                      <div className="box1" >
                             <link rel="stylesheet" href="/css/app.css" />
                             <h1><i>Edit Product Page</i></h1>
@@ -30,9 +32,11 @@ class Edit extends React.Component {
                                    <br></br>
                                    <input id="submit" type="submit" value="Submit Changes" />                            
                                    <br></br>
+                                   <br></br>
                                    <a href={`/products/`}>Back </a>
                             </form>
                      </div>
+                     </DefaultLayout>
               )
        }
 }
