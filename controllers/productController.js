@@ -126,7 +126,7 @@ const seedStarterData = (req, res) => {
 //route about
 const aboutPage = (req,res) => {
     //console.log('about')
-    res.render('products/about')
+    res.render('products/About')
     
 }
 
