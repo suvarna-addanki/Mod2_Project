@@ -14,41 +14,64 @@ const products = [
                      qty: 5
               },
               {
-                     name: 'Eloquent JavaScript',
-                     description: "Completely revised and updated, this best-selling book introduces you to programming in JavaScript and focuses on writing real applications.",
-                     img: "https://joshuawinn.com/wp-content/uploads/2020/03/eloquent_javascript_book_cover-1024x950.jpg",
-                     price: 9.99,
-                     qty: 17
+                     name:'Percy Jackson series',
+                     description:"Accompany the son of the sea god Poseidon and his other demigod friends as they go on a series of quests that will have them facing monsters, gods from Greek mythology.",
+                     img:"https://i0.wp.com/books.disney.com/content/uploads/2020/05/1484707230-1.jpg?fit=2100%2C2100&ssl=1",
+                     price: 41.99,
+                     qty:9
+              },
+              {
+                     name:'Amari and the Night Brother',
+                     description:"The story introduces a world of enchantment, danger, excitement, and humor.",
+                     img:"https://m.media-amazon.com/images/I/51ieTRZOR+S._SX329_BO1,204,203,200_.jpg",
+                     price:7,
+                     qty:5
+              },
+              {
+                     name:"Spy School",
+                     description:"This is a fictional book about Ben's life and some people who may be acting evil as part of a big mystery.",
+                     img:"https://m.media-amazon.com/images/I/41P1MXo-z2L._SX322_BO1,204,203,200_.jpg",
+                     price:6,
+                     qty:10
+              },
+              {
+                     name:"The Night diary",
+                     description:"A gripping, nuanced story of the human cost of conflict appropriate for both children and adults.",
+                     img:"https://m.media-amazon.com/images/I/51gkXOQiIML._SX323_BO1,204,203,200_.jpg",
+                     price:11,
+                     qty:20
+              },
+              {
+                     name:"The Girl Who Drank The Moon",
+                     description:"“The Girl Who Drank the Moon is a story of love, curiosity and the magic of the everyday world. This is a novel about the journey, not the destination ",
+                     img:"https://m.media-amazon.com/images/I/51fMbVKlzNL._SX327_BO1,204,203,200_.jpg",
+                     price:6,
+                     qty:13
 
               },
               {
-                     name:"Becoming",
-                     description:"A powerful, and inspiring memoir by the former First Lady of the United States",
-                     img:"https://images-na.ssl-images-amazon.com/images/I/81h2gWPTYJL.jpg",
-                     price: 29.99,
-                     qty: 6,
+                     name:"The One And Only Ivan",
+                     description:"Kindness and its ability to change lives shines through on every single page of this book",
+                     img:"https://m.media-amazon.com/images/I/41miDRDcABL._SX352_BO1,204,203,200_.jpg",
+                     price:9,
+                     qty:8
               },
               {
-                     name:"Road To React",
-                     description:"You will learn about all the fundamentals of React.js with Hooks while building a full-blown React application step by step.",
-                     img:"https://miro.medium.com/max/402/0*ZUQsq4M2P-6Omu0-.png",
-                     price:25.99,
-                     qty:8,
+                     name:"Black Beauty",
+                     description:"While forthrightly teaching animal welfare, it also teaches how to treat people with kindness, sympathy, and respect.",
+                     img:"https://m.media-amazon.com/images/I/51E7EWDZwFL._SX331_BO1,204,203,200_.jpg",
+                     price:5,
+                     qty:7
               },
               {
-                     name:"HTML,CSS and JavaScript All in One",
-                     description:"“HTML, CSS, and JavaScript All in One” is another complete resource for both beginners and advanced coders",
-                     img:"https://www.interviewbit.com/blog/wp-content/uploads/2022/01/HTML-CSS-and-JavaScript-218x300.jpg",
-                     price:13,
-                     qty:18,
-              },
-              {
-                     name:"Financial Freedom",
-                     description:"Money is unlimited. Time is not. Become financially independent as fast as possible.",
-                     img:"https://prodimage.images-bn.com/lf?set=key%5Bresolve.pixelRatio%5D,value%5B1%5D&set=key%5Bresolve.width%5D,value%5B600%5D&set=key%5Bresolve.height%5D,value%5B10000%5D&set=key%5Bresolve.imageFit%5D,value%5Bcontainerwidth%5D&set=key%5Bresolve.allowImageUpscaling%5D,value%5B0%5D&set=key%5Bresolve.format%5D,value%5Bwebp%5D&source=url%5Bhttps://prodimage.images-bn.com/pimages/9780525534587_p0_v2_s600x595.jpg%5D&scale=options%5Blimit%5D,size%5B600x10000%5D&sink=format%5Bwebp%5D",
-                     price:14,
-                     qty:9
+                     name:"The Shape Of Thunder",
+                     description:"The Shape of Thunder is a deeply moving story, told with exceptional grace, about friendship and loss",
+                     img:"https://m.media-amazon.com/images/I/41Cxn667jeL._SX329_BO1,204,203,200_.jpg",
+                     price:7,
+                     qty:13
               }
+              
+              
               
        ]
        

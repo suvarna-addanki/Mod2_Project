@@ -9,13 +9,16 @@
 //         return (
 
     const React = require('react')
+const DefaultLayout = require('../Layouts/DefaultLayouts')
     class Index extends React.Component {
            render() {
                   return (
+                     <DefaultLayout>
                          <html>
                                 <body>
+                                   
                                        <link rel="stylesheet" href="/css/app.css" />
-                                       <h1><i>Book Store</i></h1>
+                                       <h1><i>The Book Worm </i> </h1>
                                        <div id="box">
                                               {this.props.products.map((product, i) => {
                                                      return (
@@ -33,6 +36,7 @@
                                        </div>
                                 </body>
                          </html>
+                         </DefaultLayout>
                   )
            }
     }

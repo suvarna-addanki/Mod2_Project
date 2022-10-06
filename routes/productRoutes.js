@@ -21,7 +21,7 @@ const {
     updateOneProduct,
     createNewProduct,
     clearData,
-    abc,
+    aboutPage,
     buyProduct
     } = require('../controllers/productController')
 
@@ -46,6 +46,9 @@ router.get('/:id/edit', showEditView)
 //patch
 router.patch('/:id', buyProduct)
 
+//About
+router.get('/about', aboutPage)
+
 // Setup "seed" route
 router.get('/seed', seedStarterData)
 
@@ -54,6 +57,8 @@ router.get('/clear', clearData)
 
 // Setup "show" route  
 router.get('/:id', showOneProduct)
+
+
 
 
 

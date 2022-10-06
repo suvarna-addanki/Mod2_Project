@@ -2,7 +2,7 @@ const Product = require('../models/products')
 
 const seed = require('../models/seed')
 
-// ROUTE     GET /fruits    (index)
+// ROUTE     GET /products    (index)
 const findAllProducts = (req, res) => {  
     // Find takes two arguments:
     //   1st: an object with our query (to filter our data and find exactly what we need)
@@ -123,6 +123,16 @@ const seedStarterData = (req, res) => {
     })
 }
 
+//route about
+const aboutPage = (req,res) => {
+    //console.log('about')
+    res.render('products/about')
+    
+}
+
+
+
+
 //route clear
 const clearData = (req, res) => {
     Product.deleteMany({}, (err, deletedProducts) => {
@@ -135,4 +145,4 @@ const clearData = (req, res) => {
 }
 
 
-module.exports = {findAllProducts, showNewView, deleteAProduct, updateOneProduct, createNewProduct, showEditView, showOneProduct, buyProduct, seedStarterData,clearData}
+module.exports = {findAllProducts, showNewView, deleteAProduct, updateOneProduct, createNewProduct, showEditView, showOneProduct, buyProduct, seedStarterData, aboutPage, clearData}
