@@ -23,6 +23,7 @@
   letter-spacing: 1px;
   padding: 10px;
   min-height: 100vh;
+  
  }
 
  #nav-bar{
@@ -53,6 +54,7 @@
     width: 100vw;
     flex-wrap: wrap;
     gap: 20px;
+      
 }
 h1{
     text-align: center;
@@ -74,13 +76,13 @@ h3{
     }
 }
 .book{
-    outline: 2px solid yellow;
+     outline: 2px solid yellow; 
     text-align: center;
-    border: 1px inset  rgb(202, 66, 150);
+     border: 1px inset  rgb(202, 66, 150); 
     width: 400px;
     padding: 10px;
     height:500px;
-    border-radius:  20px;
+     border-radius:  20px; 
     color:rgb(223, 232, 237);
     margin:auto;
     font-style: italic;
